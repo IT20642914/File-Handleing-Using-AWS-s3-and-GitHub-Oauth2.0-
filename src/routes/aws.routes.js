@@ -8,6 +8,6 @@ const storage = multer.diskStorage({
   });
 const upload = multer({ storage: storage });
 router.get("/getsamplerequets",sampleRequest );
-router.put("/UploadFile", upload.single('file'), UploadFile);
+router.post("/UploadFile", upload.single('file'), UploadFile);
 router.get("/downloadFile",downloadFileFromS3 );
 export default router;

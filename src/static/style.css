@@ -12,8 +12,8 @@ body {
 
 .content {
   background: white;
-  width: 380px;
-  height: 480px;
+  width: 400px;
+  height: 980px;
   border-radius: 40px;
   text-align: center;
   display: flex;
@@ -69,4 +69,71 @@ input[type='text'] {
   display: inline-block;
   font-size: 52px;
   margin-bottom: 24px;
+}
+/* Style the form container */
+#dataForm {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Style form labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Style form inputs */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style form submit button */
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+/* Style the file input container */
+.file-input-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the hidden file input */
+.hidden-file-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style the "Select File" button */
+#fileInputButton {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#fileInputButton:hover {
+  background-color: #0056b3;
 }

@@ -20,7 +20,7 @@
         <h1>Happy to see you<br />newcomer 👋</h1>
       </div>
       <div class="content-bottom">
-        <a class="btn" href="/auth">SIGN IN WITH GITHUB</a>
+        <a class="btn" href="/oauth/oauth-Request">SIGN IN WITH GITHUB</a>
         <p class="sign-in-text">in order to get started</p>
       </div>
     </div>
@@ -29,6 +29,25 @@
         <img class="img-github" src="github.png" />
         <h1><span class="party-popper">🎉</span><br />Awesome!<br />You're authorized 🔒</h1>
       </div>
+         <!-- Form for sending data -->
+      <form id="dataForm">
+        <label for="formData">Data:<span id="selectedFileName"></span></label>
+        <div class="file-input-container">
+          <input type="file" id="formData" name="formData" class="hidden-file-input" />
+          <button type="button" id="fileInputButton">Select File</button>
+        </div>
+
+        <button type="submit">Upload AWS</button>
+
+      </form>
+      <h1>Download File</h1>
+      <form id="download">
+        <label for="fileName">File Name:</label>
+        <input type="text" id="fileName" name="fileName" required>
+        <button type="submit">Download</button>
+      </form>
+                  <!-- Alert message container -->
+                  <div id="alertMessage" style="display: none"></div>
     </div>
     <script type="text/javascript" src="main.js"></script>
   </body>

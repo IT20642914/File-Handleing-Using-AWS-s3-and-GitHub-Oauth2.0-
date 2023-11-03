@@ -69,7 +69,7 @@ export const sampleRequest = async (req, res) => {
       const formData = req.file;
      
       if (!formData) {
-        res.status(400).send('No file uploaded.');
+        res.status(400).send('No file to uploaded.');
         return;
       }
       const { originalname, filename } = req.file;
