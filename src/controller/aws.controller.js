@@ -2,33 +2,9 @@ import axios from 'axios';
 import { response } from 'express';
 import dotenv from "dotenv";
 import {  S3Client,PutObjectCommand,GetObjectCommand   } from '@aws-sdk/client-s3';
-import multer from 'multer';
+
 import { createReadStream } from 'fs';
 dotenv.config();
-const storage = multer.memoryStorage(); 
-const upload = multer({ storage });
-export const sampleRequest = async (req, res) => {
-    try {
-      const body=  {
-        body: {
-            grant_type: 'authorization_code',
-            client_id: 'db0d63cfa7ac3ceed7166081542216ec99e12341300e5e879105e36bd76dbf63',
-            client_secret: '0b57e8d87e35370307ba5f98ad456bd155cabacea56d49994afe083e2eb04b54',
-            code: '8957b84a67f6ae55ab79c9767836a0af30b7fb7e4c36b27434993123cce71ec7',
-            redirect_uri: 'http://localhost',
-            refresh_token: 'string'
-          },
-          }
-      const response = await axios.post('https://login.procore.com/oauth/token',body);
-  
-      const access_token = response.data.access_token;
-      console.log('Access Token:', access_token);
-      res.status(200).send(access_token);
-    } catch (error) {
-      console.error('Error:', error);
-      res.status(401).send(error.message);
-    }
-  };
 
 
 
